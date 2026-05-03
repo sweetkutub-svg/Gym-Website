@@ -65,6 +65,7 @@ const programs = [
 ];
 
 const Programs = () => {
+  const [hovered, setHovered] = useState(null);
 
   return (
     <section className="programs" id="programs">
@@ -83,7 +84,7 @@ const Programs = () => {
         <div className="programs-grid">
           {programs.map((p, i) => (
             <div
-              className={`program-card reveal-scale`}
+              className={`program-card reveal-scale ${hovered === p.id ? 'active' : ''}`}
               style={{ transitionDelay: `${i * 0.1}s` }}
               key={p.id}
               onMouseEnter={() => setHovered(p.id)}
