@@ -1,0 +1,290 @@
+.dev-section {
+  position: relative;
+  padding: 8rem 0;
+  background: var(--dark);
+  overflow: hidden;
+}
+
+.dev-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: 25vw;
+  color: rgba(212, 255, 0, 0.025);
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+}
+
+.dev-badge-wrap {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.dev-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(212, 255, 0, 0.2);
+  padding: 0.6rem 2rem;
+}
+
+.badge-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.dev-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Profile */
+.dev-profile {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.dev-avatar {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  overflow: hidden;
+  background: var(--dark3);
+}
+
+.dev-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dev-avatar-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-role-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  border: 1px solid rgba(212, 255, 0, 0.25);
+  padding: 0.25rem 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.dev-name {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  line-height: 1;
+}
+
+.dev-bio {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.dev-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+.dev-meta span {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--gray);
+}
+
+.dev-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.dev-skill {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 0.25rem 0.7rem;
+}
+
+.dev-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Projects */
+.dev-projects-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.dev-proj-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 2rem;
+}
+
+.dev-proj-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  background: var(--dark2);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.dev-proj-item:hover {
+  background: rgba(212, 255, 0, 0.06);
+  border-left-color: var(--yellow);
+  transform: translateX(4px);
+}
+
+.proj-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.proj-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: rgba(212, 255, 0, 0.3);
+  line-height: 1;
+}
+
+.proj-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+.proj-type {
+  font-size: 0.78rem;
+  color: var(--gray);
+}
+
+.proj-arrow {
+  font-size: 1.2rem;
+  color: var(--yellow);
+  transition: transform 0.3s ease;
+}
+
+.dev-proj-item:hover .proj-arrow {
+  transform: translateX(4px);
+}
+
+.dev-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+}
+
+.contact-item a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--yellow);
+}
+
+.dev-socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.social-btn {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  border: 1px solid rgba(212, 255, 0, 0.25);
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+@media (max-width: 1000px) {
+  .dev-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .dev-section {
+    padding: 5rem 0;
+  }
+  .dev-profile {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
