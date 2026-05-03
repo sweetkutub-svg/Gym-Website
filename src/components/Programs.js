@@ -65,7 +65,6 @@ const programs = [
 ];
 
 const Programs = () => {
-  const [hovered, setHovered] = useState(null);
 
   return (
     <section className="programs" id="programs">
